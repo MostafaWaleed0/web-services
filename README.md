@@ -2,8 +2,7 @@
 
 This project, a website for WEB Services
 
-## Running
-### Building
+## Running Scss
 ```powersheel
 npm run watch:sass
 ```
