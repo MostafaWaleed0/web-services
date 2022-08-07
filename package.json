@@ -1,0 +1,6 @@
+{
+  "name": "web-services",
+  "scripts": {
+    "watch:sass": "sass  --no-source-map --watch scss:css --style compressed"
+  }
+}
