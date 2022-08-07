@@ -2,14 +2,10 @@
 
 This project, a website for WEB Services
 
-## Building and Running
-### To install
- ```powershell 
- npm install -g sass 
- ```
+## Running
 ### Building
 ```powersheel
-sass -w src/scss/style.scss src/style/style.css
+npm run watch:sass
 ```
 
 
