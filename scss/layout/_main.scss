@@ -1,5 +1,5 @@
-@use '../abstracts/' as *;
-@use '../abstracts/tokens/tokens' as *;
+@use "../abstracts/" as *;
+@use "../abstracts/tokens/tokens" as *;
 
 main {
   .logos {
@@ -94,56 +94,6 @@ main {
       height: rem(650.83);
       background: $color-surface-default;
       transform: rotate(64.77deg);
-    }
-  }
-
-  .faqs {
-    .box {
-      max-width: rem(706);
-      box-shadow: 0 20px 95px rgba(201, 203, 204, 0.3);
-      border-radius: $border-radius-1;
-      cursor: pointer;
-
-      &__question {
-        border-radius: $border-radius-1;
-        @include breakpoint-down(medium) {
-          padding: var(--space-3);
-        }
-
-        span {
-          transition: 0.5s;
-          transform: rotate(-180deg);
-          @include breakpoint-down(medium) {
-            margin-inline-end: var(--space-3);
-          }
-        }
-      }
-
-      &__answer {
-        height: 0;
-        overflow: hidden;
-        transition: 0.5s;
-        border-radius: 0 0 $border-radius-1 $border-radius-1;
-
-        p {
-          padding-inline: clamp(3rem, 6vw, 7.25rem);
-        }
-      }
-
-      &.active {
-        .box__question {
-          border-radius: $border-radius-1 $border-radius-1 0 0;
-        }
-
-        .box__answer {
-          height: 100%;
-        }
-
-        span {
-          color: $color-text-hover;
-          transform: rotate(0);
-        }
-      }
     }
   }
 }
