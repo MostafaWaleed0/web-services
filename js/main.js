@@ -21,11 +21,31 @@ navToggle.addEventListener("click", () => {
 
 // ===== ACCORDIONS =====
 const faqs = document.querySelectorAll(".faqs li");
-faqs.forEach((e) => {
-  e.addEventListener("click", () => {
-    e.classList.toggle("active");
+const faqsHeader = document.querySelectorAll(".faqs li h3 > button");
+
+const openAndCloseAccordions = () => {
+  faqsHeader.forEach((e) => {
+    e.addEventListener("click", () => {
+      const getAriaExpanded = e.getAttribute("aria-expanded");
+
+      console.log(getAriaExpanded);
+
+      getAriaExpanded == "false"
+        ? e.setAttribute("aria-expanded", true)
+        : e.setAttribute("aria-expanded", false);
+    });
   });
-});
+
+  faqs.forEach((e) => {
+    e.addEventListener("click", () => {
+      e.classList.toggle("open");
+    });
+  });
+};
+
+openAndCloseAccordions();
+
+// ===== END ACCORDIONS =====
 
 // ======= Slider ======
 const items = document.querySelectorAll(".client .box");
